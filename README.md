@@ -1,7 +1,5 @@
 # О приложении Contact Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Функционал
 
 Можно добавлять контакты, которые имеют следующие поля:
