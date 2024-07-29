@@ -1,0 +1,31 @@
+.contactList {
+  width: 100%;
+}
+
+.table {
+  margin: 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  th {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .contactList {
+    overflow-x: auto;
+  }
+
+  .table {
+    flex-direction: column;
+    gap: 20px;
+    th {
+      min-width: 100px;
+    }
+  }
+}

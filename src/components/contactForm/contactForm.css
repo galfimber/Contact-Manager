@@ -1,0 +1,39 @@
+.contactForm__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  label {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  input {
+    width: 180px;
+    padding: 2px 5px;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  button {
+    align-self: flex-end;
+    width: 180px;
+    padding: 5px;
+    background-color: rgb(196, 196, 196);
+  }
+}
+
+@media (max-width: 400px) {
+  .contactForm__form {
+    max-width: 350px;
+    width: 200px;
+
+    label {
+      flex-direction: column;
+      gap: 5px;
+    }
+    button {
+      align-self: flex-start;
+    }
+  }
+}
