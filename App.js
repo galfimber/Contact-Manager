@@ -1,10 +1,10 @@
 import "./App.css";
-import ContactForm from "./components/contactForm/ContactForm";
-import ContactList from "./components/contactList/ContactList";
-import Header from "./components/header/Header";
-import { useContacts } from "./components/Hooks/useContacts";
-import { useUser } from "./components/Hooks/useUser";
-import { useId } from "./components/Hooks/useId";
+import ContactForm from "./src/components/contactForm/ContactForm";
+import ContactList from "./src/components/contactList/ContactList";
+import Header from "./src/components/header/Header";
+import { useContacts } from "./src/components/Hooks/useContacts";
+import { useUser } from "./src/components/Hooks/useUser";
+import { useId } from "./src/components/Hooks/useId";
 
 function App() {
   const contacts = useContacts();   //Хук для добавления контакта в список всех контактов
