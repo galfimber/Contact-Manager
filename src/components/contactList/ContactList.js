@@ -37,6 +37,32 @@ const ContactList = ({ contacts, setContacts, user, setUser }) => {
           </tbody>
         )}
       </table>
+      {/* 
+      <div className="contactTable">
+        <div className="contactTable__header">
+          <div>Имя</div>
+          <div>Фамилия</div>
+          <div>Телефон</div>
+          <div>email</div>
+          <div>Управление</div>
+        </div>
+        {contacts.length ? (
+          <div className="contactTable__contacts">
+            {contacts.map((contact) => (
+              <ContactItem
+                contacts={contacts}
+                setContacts={setContacts}
+                key={contact.id}
+                contact={contact}
+                user={user}
+                setUser={setUser}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="contactTable__contacts">Пусто</div>
+        )}
+      </div> */}
     </section>
   );
 };

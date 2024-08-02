@@ -1,5 +1,6 @@
-import "./style.css";
+import "./contactItem.css";
 import send from "./../helpers/send";
+import validate from "./../helpers/validate";
 
 const ContactItem = ({ contacts, setContacts, contact, user, setUser }) => {
   const newUser = {};
@@ -58,13 +59,23 @@ const ContactItem = ({ contacts, setContacts, contact, user, setUser }) => {
     //Открыто редактирование пользователя
     <tr id={contact.id}>
       <td>
-        <input name="name" type="text" defaultValue={contact.name} />
+        <input
+          name="name"
+          type="text"
+          defaultValue={contact.name}
+          onChange={validate}
+        />
       </td>
       <td>
-        <input name="surname" type="text" defaultValue={contact.surname} />
+        <input
+          name="surname"
+          type="text"
+          defaultValue={contact.surname}
+          onChange={validate}
+        />
       </td>
       <td>
-        <input name="tel" type="text" defaultValue={contact.tel} />
+        <input name="tel" type="number" defaultValue={contact.tel} />
       </td>
       <td>
         <input name="email" type="email" defaultValue={contact.email} />
@@ -77,6 +88,55 @@ const ContactItem = ({ contacts, setContacts, contact, user, setUser }) => {
       </td>
     </tr>
   );
+
+  // return user ? ( //Просто вывод пользователя
+  //   <div className="contactTable__contact" id={contact.id}>
+  //     <div>{contact.name}</div>
+  //     <div>{contact.surname}</div>
+  //     <div>{contact.tel}</div>
+  //     <div>{contact.email}</div>
+  //     <div className="contactTable__control">
+  //       <button onClick={editContact}>Редактировать</button>
+  //       <button onClick={deleteContact}>Удалить</button>
+  //     </div>
+  //   </div>
+  // ) : (
+  //   //Открыто редактирование пользователя
+  //   <form
+  //     onSubmit={(e) => {
+  //       e.preventDefault();
+  //     }}
+  //     className="contactTable__contact"
+  //     id={contact.id}
+  //   >
+  //     <div>
+  //       <input
+  //         name="name"
+  //         type="text"
+  //         defaultValue={contact.name}
+  //         onChange={validate}
+  //       />
+  //     </div>
+  //     <div>
+  //       <input
+  //         name="surname"
+  //         type="text"
+  //         defaultValue={contact.surname}
+  //         onChange={validate}
+  //       />
+  //     </div>
+  //     <div>
+  //       <input name="tel" type="number" defaultValue={contact.tel} />
+  //     </div>
+  //     <div>
+  //       <input name="email" type="email" defaultValue={contact.email} />
+  //     </div>
+  //     <div className="contactTable__control">
+  //       <button onClick={editContact}>Сохранить</button>
+  //       <button onClick={deleteContact}>Удалить</button>
+  //     </div>
+  //   </form>
+  // );
 };
 
 export default ContactItem;

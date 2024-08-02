@@ -1,0 +1,28 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.contactTable__contact {
+  display: flex;
+  justify-content: space-between;
+}
+.contactTable__contact > div {
+  width: 20%;
+  border: 1px solid black;
+}
+.contactTable__contact > input {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+}
+.contactTable__control {
+  display: flex;
+  justify-content: center;
+}
+.contactTable__control > button {
+  width: 50%;
+}
+.contactTable__control :first-child {
+  border-right: 1px solid black;
+}

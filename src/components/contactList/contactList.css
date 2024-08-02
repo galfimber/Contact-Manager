@@ -16,6 +16,19 @@
   }
 }
 
+/* .contactTable {
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.contactTable__header {
+  display: flex;
+  justify-content: space-between;
+}
+.contactTable__header > div {
+  width: 20%;
+  border: 1px solid black;
+} */
+
 @media (max-width: 1500px) {
   .contactList {
     overflow-x: auto;
